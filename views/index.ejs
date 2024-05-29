@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>BESTHomeFI</title>
+  <meta content="" name="description" />
+  <meta content="" name="keywords" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+  <nav class=" navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">BESTHomeFI</a>
+      </div>
+      <ul class="nav navbar-nav navbar-right">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="http://localhost:3000/dashboard">Dashboard</a></li>
+      </ul>
+    </div>
+  </nav>
+  <br>
+  <br>
+  <main>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-1">
+        </div>
+        <div class="col-sm-5">
+          <h2 style="text-transform:uppercase;">California Housing Price Forecasting </h2>
+          <br>
+          <hr>
+
+          <ul>
+            <li style=" font-style: italic;font-size: medium;">Explore our predictive model and discover the perfect
+              house
+              for your budget
+            </li>
+            <br>
+            <li style=" font-style: italic;font-size: medium;">Our cutting-edge algorithm accurately forecasts real
+              estate
+              values for
+              smarter
+              investments</li>
+            <br>
+            <li style=" font-style: italic;font-size: medium;">Leverage our state-of-the-art model to make informed
+              decisions and achieve
+              your
+              financial goals</li>
+            <br>
+            <li style=" font-style: italic;font-size: medium;">Streamline your property search with our user-friendly
+              tool
+              that predicts
+              housing prices in California</li>
+          </ul>
+        </div>
+        <div class="row">
+          <div class=" col-sm-6">
+            <h3 style="text-align: center;">California Home Value Calculator </h3>
+            <form action="/predict" method="post" style="height:80%;">
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label for="longitude">Longitude</label>
+                  <input type="text" class="form-control" name="longitude" required>
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="latitude">Latitude</label>
+                  <input type="text" class="form-control" name="latitude" required>
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="housing_median_age">Housing Median Age</label>
+                  <input type="text" class="form-control" name="housing_median_age" required>
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="total_rooms">Total Rooms</label>
+                  <input type="text" class="form-control" name="total_rooms" required>
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="total_bedrooms">Total Bedrooms</label>
+                  <input type="text" class="form-control" name="total_bedrooms" required>
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="population">Population</label>
+                  <input type="text" class="form-control" name="population" required>
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="households">Households</label>
+                  <input type="text" class="form-control" name="households" required>
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="median_income">Median Income</label>
+                  <input type="text" class="form-control" name="median_income" required>
+                </div>
+
+                <div class="form-row">
+                  <div class="form-group col-md-6">
+                    <label for="ocean_proximity">Ocean Proximity</label>
+                    <select class="form-control" name="ocean_proximity" required>
+                      <option value="<1H OCEAN">Less than 1 hour to ocean</option>
+                      <option value="INLAND">Inland</option>
+                      <option value="NEAR OCEAN">Near ocean</option>
+                      <option value="NEAR BAY">Near bay</option>
+                      <option value="ISLAND">Island</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form-group col-md-6">
+                </div>
+                <div class="form-group col-md-12">
+                  <button type="submit" class="btn btn-default"
+                    style="background-color: black;color: white;">Calculate</button>
+                </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <br><br><br>
+  <footer class="navbar navbar-default" style="background-color: black;">
+    <div class="container">
+      <div class="navbar-text text-center mx-auto" style="color: white;">
+        <p> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+          &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+          Hashnode + Mindsdb Hackthon</p>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

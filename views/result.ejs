@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>BESTHomeFI</title>
+  <meta content="" name="description" />
+  <meta content="" name="keywords" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">BESTHomeFI</a>
+    </div>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="http://localhost:3000/dashboard">Dashboard</a></li>
+    </ul>
+  </div>
+</nav>
+
+<body>
+  <main>
+    <h1 style="text-align:center">House Price Prediction</h1>
+    <h3 style="text-align:center">The Predicted Home Price is: $<%= homePrice %>
+    </h3>
+    <h4 style="text-align:center">Ocean Proximity: <%= ocean_proximity %>
+    </h4>
+    <div style="text-align: center;">
+      <a href="/"><button style="background-color: black;color: white;">Go Home</button></a>
+    </div>
+
+
+    <h3 style="text-align:center">Median Values by Ocean Proximity </h3>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-2">
+
+        </div>
+        <div class="col-sm-8">
+          <table class="table table-striped table-bordered table-hover">
+            <thead>
+              <tr>
+                <th>Ocean Proximity</th>
+                <th>Median House Price</th>
+                <th>Median Income</th>
+                <th>Housing Median Age</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% medianData.rows.forEach(function(data) { %>
+                <tr>
+                  <td>
+                    <%= data.ocean_proximity %>
+                  </td>
+                  <td>
+                    $<%= data.median_house_price %>
+                  </td>
+                  <td>
+                    <%= data.median_income %>
+                  </td>
+                  <td>
+                    <%= data.housing_median_age %>
+                  </td>
+                </tr>
+                <% }); %>
+            </tbody>
+          </table>
+
+        </div>
+        <div class="col-sm-2">
+        </div>
+      </div>
+    </div>
+  </main>
+  <br><br><br><br><br><br><br>
+  <footer class="navbar navbar-default" style="background-color: black;">
+    <div class="container">
+      <div class="navbar-text text-center mx-auto" style="color: white;">
+        <p> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+          &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+          Hashnode + Mindsdb Hackthon</p>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>
