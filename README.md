@@ -94,31 +94,7 @@ Steps to run the app on localhost:
 
 10. **Now you can write the query & predict the value in the MindsDB editor.**
 
-
-
 11. **Start the Node.js server on your machine:**
     ```bash
     node app.js 
     ```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
